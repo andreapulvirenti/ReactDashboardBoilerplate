@@ -1,0 +1,14 @@
+[
+	{
+                "key": 1,
+                "linkTo": "/",
+                "iconClass" : "fa fa-home",
+                "elementName": "Files"
+	},
+	{
+                "key": 2,
+                "linkTo": "ean",
+                "iconClass" : "fa fa-home",
+                "elementName": "EAN management"
+	}
+]
