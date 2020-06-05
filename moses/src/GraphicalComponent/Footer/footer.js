@@ -19,7 +19,7 @@ export default function Footer() {
             <small>
               C.F. E NUMERO DI ISCRIZIONE AL RI: 12176650013 – REA TO 1270365
               CAPITALE SOCIALE € 100.000  – P. IVA 12176650013
-            </small>
+            </small> 
           </Typography>
         </Grid>
       </Box>
