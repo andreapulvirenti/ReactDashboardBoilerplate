@@ -1,8 +1,8 @@
 import React from 'react';
-import './FilesManag.css';
+import './FilePage.css';
 import { Link } from "react-router-dom";
 
-export default function Filemanag() {
+export default function FilePage() {
     return (
         <>
             {/* <form>

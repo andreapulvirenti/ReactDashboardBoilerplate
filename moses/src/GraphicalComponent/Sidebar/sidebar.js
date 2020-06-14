@@ -3,7 +3,7 @@ import SidebarComponent from './SidebarComponent/sidebarComponent';
 import elements from './SidebarConfig.json';
 import './sidebar.css';
 
-export default function Sidebar(){
+export default function Sidebar(props){
     return(
         <>
             <nav className="sidebar">
@@ -12,7 +12,7 @@ export default function Sidebar(){
                     elements.map(function(item){
                         return(
                             <SidebarComponent  key={item.key} element={item}>
-
+                                   {props.children}
                             </SidebarComponent>
                         )
                     })

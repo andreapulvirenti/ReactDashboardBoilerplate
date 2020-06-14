@@ -1,24 +1,35 @@
 import React from 'react';
-import FileManag from './FileManag/FilesManag';
-import EanManag from './EANManag/EanManag';
+import { Grid, Paper } from '@material-ui/core';
+import clsx from 'clsx';
+import Classes from '../../Shared/classes';
+import FilePage from './FilePage/FilePage';
+import EanPage from './EANPage/EanPage';
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-} from "react-router-dom";
+
+const classes = Classes;
 
 export default function Main() {
-    return (
-        <>
-            <Switch className="content">
-                <Route exact path="/">
-                    <FileManag></FileManag>
-                </Route>
-                <Route path="/ean">
-                    <EanManag></EanManag>
-                </Route>
-            </Switch>
-        </>
-    )
+  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  return (
+    <>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={8} lg={9}>
+          <Paper className={fixedHeightPaper}>
+            <FilePage></FilePage>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={4} lg={3}>
+          <Paper className={fixedHeightPaper}>
+            <EanPage></EanPage>
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            
+          </Paper>
+        </Grid>
+      </Grid>
+    </>
+  )
 }
